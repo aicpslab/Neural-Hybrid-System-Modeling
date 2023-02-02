@@ -21,7 +21,7 @@ n = input('\nType the number of the model you wish to run [type 0 to exit]: ');
    end
       
 % How many trajectories we want to obtain
-NeuronNum_switch=20;
+NeuronNum_switch=40;
 NeuronNum_single=200;
 % Sampling data from working zone
 u=0.2;
@@ -29,7 +29,7 @@ delta=0.5;
 tau=0.01;
 
 duration = 1000;
-e=4e-5;
+e=1.8e-4;
 tol = 5;
 maximum_entropy=40;
 Dimension=2;
@@ -94,8 +94,9 @@ ELMs1=ELM.GenerateELM(size(xs,2),NeuronNum_switch,'ReLu',size(t,2));
 figure
 partitions.intervalplot(P.intervals,'empty','black')
 figure
+partitions.intervalplot(P.intervals,'empty','black')
 partitions.intervalplot(P1.intervals,'full','red')
-title('Partitions using Bisection method')
+%title('Invariantspace using Bisection method')
 
 %% Train a Complex Neural Network Model as referance
 ELMs1=ELM.GenerateELM(size(xs,2),NeuronNum_single,'ReLu',2);
@@ -172,6 +173,7 @@ end
 TrajELMs=Traj;
 
 % For Single model
+
 for j=1:validNum
     for i = 2:1:duration              
              % TrajELMs{1,j}(3,i-1) = uk(i-1,1);

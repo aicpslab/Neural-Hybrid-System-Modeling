@@ -21,15 +21,13 @@ n = input('\nType the number of the model you wish to run [type 0 to exit]: ');
    end
       
 % How many trajectories we want to obtain
-NeuronNum_switch=40;
+NeuronNum_switch=20;
 NeuronNum_single=200;
 % Sampling data from working zone
-u=0.2;
-delta=0.5;
-tau=0.01;
+
 
 duration = 1000;
-e=1.8e-4;
+e=8e-3;
 tol = 5;
 maximum_entropy=40;
 Dimension=2;
@@ -39,7 +37,7 @@ durationReach=20;
 switch(n)
     case 1
         inputbound =[-44.35;-44.3;-3.12;-3.1];
-        thetaInterval=[-46 -44;-3.1 -2];
+        thetaInterval=[-44.5 -44;-3.1 -3];
     case 2
          thetaInterval=[-1.3 2;38 40];
          inputbound = [-0.2;0;39.8;40];
@@ -135,7 +133,7 @@ for j=1:size(Traj,2)
        for k=1:size(segmentIndex,2)
            for z= 1:size(segmentIndex{k},1)/2
               if(Traj{1,j}(1,i-1)>segmentIndex{k}(2*z-1,1)&&((Traj{1,j}(1,i-1)<segmentIndex{k}(2*z-1,2)))&&(flag==0))
-                    if(Traj{j}(2,i-1)>segmentIndex{1,k}(2*z,1))&&((Traj{j}(2,i-1)<segmentIndex{1,k}(2*z,2)))%state dependent switch
+                    if(Traj{1,j}(2,i-1)>segmentIndex{1,k}(2*z,1))&&((Traj{j}(2,i-1)<segmentIndex{1,k}(2*z,2)))%state dependent switch
   %                      Traj{1,j}(3,i-1) = uk(i-1);                    
                         Traj{1,j}(1:2,i)= ELMpredict(ELMs(k),Traj{1,j}(:,i-1));
                         TrajflagDDM{j}(i-1)=k; 

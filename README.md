@@ -20,6 +20,8 @@ Go into the Neural-Hybrid-System-Modeling/examples` folders to execute the scrip
 
 # Features
 This tool use data-driven method to enhance the scalability in neural network modeling.
-![image](https://github.com/aicpslab/Neural-Hybrid-System-Modeling/blob/main/Example/Fig/ME%20bisecting.png)
 
+Bisecting the feature space using ME partitioning
+![image](https://github.com/aicpslab/Neural-Hybrid-System-Modeling/blob/main/Example/Fig/ME%20bisecting.png)
+Merging and Dynamics Learning
 ![image](https://github.com/aicpslab/Neural-Hybrid-System-Modeling/blob/main/Example/Fig/Merging%20and%20Learning%20of%20NHS.png)

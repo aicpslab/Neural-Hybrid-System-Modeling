@@ -17,3 +17,9 @@ This toolbox makes use of the Neural Network Verification (NNV) for reachability
 # Running tests and examples
 
 Go into the Neural-Hybrid-System-Modeling/examples` folders to execute the scripts for testing/analyzing examples.
+
+# Features
+This tool use data-driven method to enhance the scalability in neural network modeling.
+![image](https://github.com/aicpslab/Neural-Hybrid-System-Modeling/blob/main/Example/Fig/ME%20bisecting.png)
+
+![image](https://github.com/aicpslab/Neural-Hybrid-System-Modeling/blob/main/Example/Fig/Merging%20and%20Learning%20of%20NHS.png)

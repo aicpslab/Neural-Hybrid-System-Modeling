@@ -21,7 +21,7 @@ n = input('\nType the number of the model you wish to run [type 0 to exit]: ');
    end
       
 % How many trajectories we want to obtain
-NeuronNum_switch=20;
+NeuronNum_switch=40;
 NeuronNum_single=200;
 % Sampling data from working zone
 u=0.2;
@@ -29,7 +29,7 @@ delta=0.5;
 tau=0.01;
 
 duration = 1000;
-e=4e-5;
+e=1.8e-4;
 tol = 5;
 maximum_entropy=40;
 Dimension=2;

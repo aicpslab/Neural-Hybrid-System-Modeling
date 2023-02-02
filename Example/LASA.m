@@ -34,7 +34,7 @@ tol = 5;
 maximum_entropy=40;
 Dimension=2;
 % Initial Input Set
-durationReach=20;
+durationReach=500;
 
 switch(n)
     case 1
@@ -291,9 +291,9 @@ fprintf('Reachable set estimation for switching ELM time using nnv')
     ylabel('x_2') 
     % axis([-1.5 2 -1.5 2]); 
      grid on
-     set(gca, 'GridLineStyle', ':');
-     set(gca, 'GridAlpha', 1);
-    set(gca, 'XTick', -4:1/1:4);
-     set(gca, 'YTick', -4:1/1:4);
-     set(gca, 'XMinorGrid','on');
-     set(gca, 'YMinorGrid','on');
+%      set(gca, 'GridLineStyle', ':');
+%      set(gca, 'GridAlpha', 1);
+%     set(gca, 'XTick', -4:1/1:4);
+%      set(gca, 'YTick', -4:1/1:4);
+%      set(gca, 'XMinorGrid','on');
+%      set(gca, 'YMinorGrid','on');
